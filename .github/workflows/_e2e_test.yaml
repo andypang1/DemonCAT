@@ -98,7 +98,8 @@ jobs:
           if command -v ccache >/dev/null 2>&1; then
             echo "ccache present"
           else
-            sudo apt-get update -qq && sudo apt-get install -y -qq ccache || true
+            sudo apt-get update -qq || true
+            sudo apt-get install -y -qq ccache || true
           fi
 
       - name: Configure
